@@ -1,0 +1,118 @@
+*PPD-Adobe: "4.3"
+*%%%% PPD file for TM C600 with CUPS.
+*%%%% Created by the CUPS PPD Compiler CUPS v2.2.0.
+*FormatVersion: "4.3"
+*FileVersion: "0.1"
+*LanguageVersion: English
+*LanguageEncoding: ISOLatin1
+*PCFileName: "ep_tmc600.ppd"
+*Product: "(TM C600)"
+*Manufacturer: "EPSON"
+*ModelName: "EPSON TM C600"
+*ShortNickName: "EPSON TM C600"
+*NickName: "EPSON TM C600, 0.1"
+*PSVersion: "(3010.000) 0"
+*LanguageLevel: "3"
+*ColorDevice: True
+*DefaultColorSpace: RGB
+*FileSystem: False
+*Throughput: "1"
+*LandscapeOrientation: Plus90
+*TTRasterizer: Type42
+*% Driver-defined attributes...
+*cupsESCPAC: "1"
+*cupsInkChannels: "3"
+*cupsAllDither RGB: "1.0"
+*cupsVersion: 2.2
+*cupsModelNumber: 0
+*cupsManualCopies: False
+*cupsFilter: "application/vnd.cups-raster 100 /usr/lib/cups/filter/rastertotmc600"
+*cupsLanguages: "en"
+*OpenUI *PageSize/Media Size: PickOne
+*OrderDependency: 10 AnySetup *PageSize
+*DefaultPageSize: labelx5
+*PageSize labelx1/Label - 2.25x4in: "<</PageSize[162 72]/ImagingBBox null>>setpagedevice"
+*PageSize labelx3/Label - 2.25x3in: "<</PageSize[162 216]/ImagingBBox null>>setpagedevice"
+*PageSize labelx4/Label - 2.25x3in: "<</PageSize[162 288]/ImagingBBox null>>setpagedevice"
+*PageSize labelx5/Label - 2.25x5in: "<</PageSize[162 360]/ImagingBBox null>>setpagedevice"
+*CloseUI: *PageSize
+*OpenUI *PageRegion/Media Size: PickOne
+*OrderDependency: 10 AnySetup *PageRegion
+*DefaultPageRegion: labelx5
+*PageRegion labelx1/Label - 2.25x4in: "<</PageSize[162 72]/ImagingBBox null>>setpagedevice"
+*PageRegion labelx3/Label - 2.25x3in: "<</PageSize[162 216]/ImagingBBox null>>setpagedevice"
+*PageRegion labelx4/Label - 2.25x3in: "<</PageSize[162 288]/ImagingBBox null>>setpagedevice"
+*PageRegion labelx5/Label - 2.25x5in: "<</PageSize[162 360]/ImagingBBox null>>setpagedevice"
+*CloseUI: *PageRegion
+*DefaultImageableArea: labelx5
+*ImageableArea labelx1/Label - 2.25x4in: "0 28.346458435059 156.330703735352 57.826770782471"
+*ImageableArea labelx3/Label - 2.25x3in: "0 28.346458435059 156.330703735352 201.826766967773"
+*ImageableArea labelx4/Label - 2.25x3in: "0 28.346458435059 156.330703735352 273.826782226562"
+*ImageableArea labelx5/Label - 2.25x5in: "0 28.346458435059 156.330703735352 345.826782226562"
+*DefaultPaperDimension: labelx5
+*PaperDimension labelx1/Label - 2.25x4in: "162 72"
+*PaperDimension labelx3/Label - 2.25x3in: "162 216"
+*PaperDimension labelx4/Label - 2.25x3in: "162 288"
+*PaperDimension labelx5/Label - 2.25x5in: "162 360"
+*MaxMediaWidth: "162"
+*MaxMediaHeight: "72000"
+*HWMargins: 0 28.346458435059 5.669291496277 14.173229217529
+*CustomPageSize True: "pop pop pop <</PageSize[5 -2 roll]/ImagingBBox null>>setpagedevice"
+*ParamCustomPageSize Width: 1 points 72 162
+*ParamCustomPageSize Height: 2 points 72 72000
+*ParamCustomPageSize WidthOffset: 3 points 0 0
+*ParamCustomPageSize HeightOffset: 4 points 0 0
+*ParamCustomPageSize Orientation: 5 int 0 0
+*OpenUI *CutMedia/Cut Media: Boolean
+*OrderDependency: 10 AnySetup *CutMedia
+*DefaultCutMedia: False
+*CutMedia False/False: "<</CutMedia 0>>setpagedevice"
+*CutMedia True/True: "<</CutMedia 4>>setpagedevice"
+*CloseUI: *CutMedia
+*OpenUI *ColorModel/Color Mode: PickOne
+*OrderDependency: 10 AnySetup *ColorModel
+*DefaultColorModel: RGB
+*ColorModel RGB/Color RGB: "<</cupsColorSpace 1/cupsColorOrder 0/cupsCompression 0>>setpagedevice"
+*CloseUI: *ColorModel
+*OpenUI *Resolution/Resolution: PickOne
+*OrderDependency: 10 AnySetup *Resolution
+*DefaultResolution: 360x180dpi
+*Resolution 360x180dpi/360x180 DPI: "<</HWResolution[360 180]/cupsBitsPerColor 8/cupsRowCount 0/cupsRowFeed 0/cupsRowStep 0>>setpagedevice"
+*CloseUI: *Resolution
+*DefaultFont: Courier
+*Font AvantGarde-Book: Standard "(1.05)" Standard ROM
+*Font AvantGarde-BookOblique: Standard "(1.05)" Standard ROM
+*Font AvantGarde-Demi: Standard "(1.05)" Standard ROM
+*Font AvantGarde-DemiOblique: Standard "(1.05)" Standard ROM
+*Font Bookman-Demi: Standard "(1.05)" Standard ROM
+*Font Bookman-DemiItalic: Standard "(1.05)" Standard ROM
+*Font Bookman-Light: Standard "(1.05)" Standard ROM
+*Font Bookman-LightItalic: Standard "(1.05)" Standard ROM
+*Font Courier: Standard "(1.05)" Standard ROM
+*Font Courier-Bold: Standard "(1.05)" Standard ROM
+*Font Courier-BoldOblique: Standard "(1.05)" Standard ROM
+*Font Courier-Oblique: Standard "(1.05)" Standard ROM
+*Font Helvetica: Standard "(1.05)" Standard ROM
+*Font Helvetica-Bold: Standard "(1.05)" Standard ROM
+*Font Helvetica-BoldOblique: Standard "(1.05)" Standard ROM
+*Font Helvetica-Narrow: Standard "(1.05)" Standard ROM
+*Font Helvetica-Narrow-Bold: Standard "(1.05)" Standard ROM
+*Font Helvetica-Narrow-BoldOblique: Standard "(1.05)" Standard ROM
+*Font Helvetica-Narrow-Oblique: Standard "(1.05)" Standard ROM
+*Font Helvetica-Oblique: Standard "(1.05)" Standard ROM
+*Font NewCenturySchlbk-Bold: Standard "(1.05)" Standard ROM
+*Font NewCenturySchlbk-BoldItalic: Standard "(1.05)" Standard ROM
+*Font NewCenturySchlbk-Italic: Standard "(1.05)" Standard ROM
+*Font NewCenturySchlbk-Roman: Standard "(1.05)" Standard ROM
+*Font Palatino-Bold: Standard "(1.05)" Standard ROM
+*Font Palatino-BoldItalic: Standard "(1.05)" Standard ROM
+*Font Palatino-Italic: Standard "(1.05)" Standard ROM
+*Font Palatino-Roman: Standard "(1.05)" Standard ROM
+*Font Symbol: Special "(001.005)" Special ROM
+*Font Times-Bold: Standard "(1.05)" Standard ROM
+*Font Times-BoldItalic: Standard "(1.05)" Standard ROM
+*Font Times-Italic: Standard "(1.05)" Standard ROM
+*Font Times-Roman: Standard "(1.05)" Standard ROM
+*Font ZapfChancery-MediumItalic: Standard "(1.05)" Standard ROM
+*Font ZapfDingbats: Special "(001.005)" Special ROM
+*% End of ep_tmc600.ppd, 05622 bytes.

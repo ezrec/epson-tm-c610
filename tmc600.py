@@ -248,11 +248,13 @@ class EpsonTMC600(object):
         # Got to the top margin
         self.send_escp(b'v', struct.pack("<L", self.margin_top))
 
+        row_count = 180
+
         # Render the lines...
-        for y in range(0, v_dots, 180):
+        for y in range(0, v_dots, row_count):
             # .. in groups of 180
-            if v_dots - y > 180:
-                lines = 180
+            if v_dots - y > row_count:
+                lines = row_count
             else:
                 lines = v_dots - y
 
@@ -260,7 +262,7 @@ class EpsonTMC600(object):
 
             self._render_lines(raster)
 
-            if lines == 180:
+            if lines == row_count:
                 self.send_escp(b'v', struct.pack("<L", lines))
             pass
 
