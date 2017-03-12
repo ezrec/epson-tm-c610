@@ -1,16 +1,16 @@
 *PPD-Adobe: "4.3"
-*%%%% PPD file for TM C600 with CUPS.
+*%%%% PPD file for TM C610 with CUPS.
 *%%%% Created by the CUPS PPD Compiler CUPS v2.2.0.
 *FormatVersion: "4.3"
 *FileVersion: "0.2"
 *LanguageVersion: English
 *LanguageEncoding: ISOLatin1
-*PCFileName: "ep_tmc600.ppd"
-*Product: "(TM C600)"
+*PCFileName: "ep_tmc610.ppd"
+*Product: "(TM C610)"
 *Manufacturer: "EPSON"
-*ModelName: "EPSON TM C600"
-*ShortNickName: "EPSON TM C600"
-*NickName: "EPSON TM C600, 0.2"
+*ModelName: "EPSON TM C610"
+*ShortNickName: "EPSON TM C610"
+*NickName: "EPSON TM C610, 0.2"
 *PSVersion: "(3010.000) 0"
 *LanguageLevel: "3"
 *ColorDevice: True
@@ -118,4 +118,4 @@
 *Font Times-Roman: Standard "(1.05)" Standard ROM
 *Font ZapfChancery-MediumItalic: Standard "(1.05)" Standard ROM
 *Font ZapfDingbats: Special "(001.005)" Special ROM
-*% End of ep_tmc600.ppd, 05907 bytes.
+*% End of ep_tmc610.ppd, 05907 bytes.

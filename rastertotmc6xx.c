@@ -1,4 +1,13 @@
 /*
+ * Derived form the CUPS rastertoescpx driver, with several liberties taken
+ *
+ * http://www.cups.org for the original sources.
+ *
+ * Licensed under the LGPL2, with no additional restrictions, as per the
+ * CUPS LICENSE.txt
+ */
+
+/*
  * Include necessary headers...
  */
 
@@ -86,10 +95,12 @@ StartPage(ppd_file_t         *ppd,	/* I - PPD file */
 					/* Resolution string */
 		spec[PPD_MAX_NAME];	/* PPD attribute name */
   ppd_attr_t	*attr;			/* Attribute from PPD file */
-  const float	default_lut[2] =	/* Default dithering lookup table */
+  const float	default_lut[] =	/* Default dithering lookup table */
 		{
 		  0.0,
-		  1.0
+		  0.25,
+		  0.5,
+		  0.75,
 		};
 
 
@@ -210,6 +221,7 @@ StartPage(ppd_file_t         *ppd,	/* I - PPD file */
   * Get the dithering parameters...
   */
 
+#if 0
   switch (PrinterPlanes)
   {
     case 1 : /* K */
@@ -226,13 +238,14 @@ StartPage(ppd_file_t         *ppd,	/* I - PPD file */
 	                            resolution, "Yellow");
         break;
   }
+#endif
 
   for (plane = 0; plane < PrinterPlanes; plane ++)
   {
     DitherStates[plane] = cupsDitherNew(header->cupsWidth);
 
     if (!DitherLuts[plane])
-      DitherLuts[plane] = cupsLutNew(2, default_lut);
+      DitherLuts[plane] = cupsLutNew(sizeof(default_lut)/sizeof(default_lut[0]), default_lut);
   }
 
   BitPlanes = 2;
@@ -665,7 +678,12 @@ void EmitDotRows(ppd_file_t *ppd, cups_page_header2_t *header)
 
         for (microweave = 0; microweave < 2; microweave++)
         {
-            cupsPackHorizontal2(&OutputBuffers[plane][input_width / 2 * microweave], DotBuffers[plane], input_width / 2, 1);
+            int row;
+
+            for (row = 0; row < rows; row++)
+            {
+                cupsPackHorizontal2(&OutputBuffers[plane][input_width / 2 * microweave + row * header->cupsWidth], &DotBuffers[plane][row * DotBufferSize], header->cupsWidth, 1);
+            }
 
             if (OutputFeed > 0)
             {
@@ -677,7 +695,7 @@ void EmitDotRows(ppd_file_t *ppd, cups_page_header2_t *header)
                 OutputFeed = 0;
              }
 
-             CompressData(ppd, DotBuffers[plane], DotBufferSize * rows, plane, 1, rows, 0, microweave);
+             CompressData(ppd, DotBuffers[plane], DotBufferSize * rows, plane, header->cupsCompression, rows, 0, microweave);
         }
 
         fflush(stdout);

@@ -7,18 +7,15 @@ Font *
 
 // Manufacturer, model name, and version
 Manufacturer "EPSON"
-ModelName "TM C600"
 ModelNumber 0
-Version 0.1
+Version 0.2
 
 Attribute cupsESCPAC "" 1
 
 Attribute cupsInkChannels "" 3
 
-Attribute cupsAllDither RGB "1.0"
-
 // Each filter provided by the driver...
-Filter application/vnd.cups-raster 100 /usr/lib/cups/filter/rastertotmc600
+Filter application/vnd.cups-raster 100 rastertotmc6xx
 
 // We have a cutter
 Cutter yes
@@ -26,24 +23,34 @@ Cutter yes
 VariablePaperSize yes
 MinSize 1in 1in
 MaxSize 2.25in 1000in
-HWMargins 0mm 10mm 1mm 5mm
+HWMargins 0mm 10mm 4mm 5mm
 
 // Supported page sizes
-#media "labelx1/Label - 2.25x4in" 2.25in 1in
+#media "labelx1/Label - 2.25x1in" 2.25in 1in
+#media "labelx2/Label - 2.25x2in" 2.25in 2in
 #media "labelx3/Label - 2.25x3in" 2.25in 3in
 #media "labelx4/Label - 2.25x3in" 2.25in 4in
 #media "labelx5/Label - 2.25x5in" 2.25in 5in
 MediaSize labelx1
+MediaSize labelx2
 MediaSize labelx3
-MediaSize labelx4
-*MediaSize labelx5
+*MediaSize labelx4
+MediaSize labelx5
 
 // Color information
 ColorDevice yes
-ColorModel "RGB/Color RGB" rgb chunky 0
+ColorModel "RGB/Color RGB" rgb chunky 1
 
 // Supported resolutions
 *Resolution - 8 0 0 0 "360x180dpi/360x180 DPI"
 
 // Specify the name of the PPD file we want to generate...
-PCFileName "ep_tmc600.ppd"
+{
+    ModelName "TM C600"
+    PCFileName "ep_tmc600.ppd"
+}
+
+{
+    ModelName "TM C610"
+    PCFileName "ep_tmc610.ppd"
+}
