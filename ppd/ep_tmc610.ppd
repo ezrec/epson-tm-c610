@@ -2,7 +2,7 @@
 *%%%% PPD file for TM C610 with CUPS.
 *%%%% Created by the CUPS PPD Compiler CUPS v2.2.0.
 *FormatVersion: "4.3"
-*FileVersion: "0.2"
+*FileVersion: "0.3"
 *LanguageVersion: English
 *LanguageEncoding: ISOLatin1
 *PCFileName: "ep_tmc610.ppd"
@@ -10,7 +10,7 @@
 *Manufacturer: "EPSON"
 *ModelName: "EPSON TM C610"
 *ShortNickName: "EPSON TM C610"
-*NickName: "EPSON TM C610, 0.2"
+*NickName: "EPSON TM C610, 0.3"
 *PSVersion: "(3010.000) 0"
 *LanguageLevel: "3"
 *ColorDevice: True
@@ -22,41 +22,44 @@
 *% Driver-defined attributes...
 *cupsESCPAC: "1"
 *cupsInkChannels: "3"
+*cupsAllDither 360x180dpi: "0.25 0.5 1.0"
 *cupsVersion: 2.2
 *cupsModelNumber: 0
 *cupsManualCopies: False
+*cupsFilter: "application/vnd.cups-command 100 commandtoescpx"
 *cupsFilter: "application/vnd.cups-raster 100 rastertotmc6xx"
+*cupsColorProfile -/-: "1 1 1 0 0 0 1 0 0 0 1"
 *cupsLanguages: "en"
 *OpenUI *PageSize/Media Size: PickOne
 *OrderDependency: 10 AnySetup *PageSize
-*DefaultPageSize: labelx4
-*PageSize labelx1/Label - 2.25x1in: "<</PageSize[162 72]/ImagingBBox null>>setpagedevice"
-*PageSize labelx2/Label - 2.25x2in: "<</PageSize[162 144]/ImagingBBox null>>setpagedevice"
-*PageSize labelx3/Label - 2.25x3in: "<</PageSize[162 216]/ImagingBBox null>>setpagedevice"
-*PageSize labelx4/Label - 2.25x3in: "<</PageSize[162 288]/ImagingBBox null>>setpagedevice"
-*PageSize labelx5/Label - 2.25x5in: "<</PageSize[162 360]/ImagingBBox null>>setpagedevice"
+*DefaultPageSize: labelx3_5
+*PageSize labelx1_0/Label - 2.25x1in: "<</PageSize[162 72]/ImagingBBox null>>setpagedevice"
+*PageSize labelx2_0/Label - 2.25x2in: "<</PageSize[162 144]/ImagingBBox null>>setpagedevice"
+*PageSize labelx2_5/Label - 2.25x2in: "<</PageSize[162 180]/ImagingBBox null>>setpagedevice"
+*PageSize labelx3_0/Label - 2.25x3in: "<</PageSize[162 216]/ImagingBBox null>>setpagedevice"
+*PageSize labelx3_5/Label - 2.25x3in: "<</PageSize[162 252]/ImagingBBox null>>setpagedevice"
 *CloseUI: *PageSize
 *OpenUI *PageRegion/Media Size: PickOne
 *OrderDependency: 10 AnySetup *PageRegion
-*DefaultPageRegion: labelx4
-*PageRegion labelx1/Label - 2.25x1in: "<</PageSize[162 72]/ImagingBBox null>>setpagedevice"
-*PageRegion labelx2/Label - 2.25x2in: "<</PageSize[162 144]/ImagingBBox null>>setpagedevice"
-*PageRegion labelx3/Label - 2.25x3in: "<</PageSize[162 216]/ImagingBBox null>>setpagedevice"
-*PageRegion labelx4/Label - 2.25x3in: "<</PageSize[162 288]/ImagingBBox null>>setpagedevice"
-*PageRegion labelx5/Label - 2.25x5in: "<</PageSize[162 360]/ImagingBBox null>>setpagedevice"
+*DefaultPageRegion: labelx3_5
+*PageRegion labelx1_0/Label - 2.25x1in: "<</PageSize[162 72]/ImagingBBox null>>setpagedevice"
+*PageRegion labelx2_0/Label - 2.25x2in: "<</PageSize[162 144]/ImagingBBox null>>setpagedevice"
+*PageRegion labelx2_5/Label - 2.25x2in: "<</PageSize[162 180]/ImagingBBox null>>setpagedevice"
+*PageRegion labelx3_0/Label - 2.25x3in: "<</PageSize[162 216]/ImagingBBox null>>setpagedevice"
+*PageRegion labelx3_5/Label - 2.25x3in: "<</PageSize[162 252]/ImagingBBox null>>setpagedevice"
 *CloseUI: *PageRegion
-*DefaultImageableArea: labelx4
-*ImageableArea labelx1/Label - 2.25x1in: "0 28.346458435059 150.661422729492 57.826770782471"
-*ImageableArea labelx2/Label - 2.25x2in: "0 28.346458435059 150.661422729492 129.826766967773"
-*ImageableArea labelx3/Label - 2.25x3in: "0 28.346458435059 150.661422729492 201.826766967773"
-*ImageableArea labelx4/Label - 2.25x3in: "0 28.346458435059 150.661422729492 273.826782226562"
-*ImageableArea labelx5/Label - 2.25x5in: "0 28.346458435059 150.661422729492 345.826782226562"
-*DefaultPaperDimension: labelx4
-*PaperDimension labelx1/Label - 2.25x1in: "162 72"
-*PaperDimension labelx2/Label - 2.25x2in: "162 144"
-*PaperDimension labelx3/Label - 2.25x3in: "162 216"
-*PaperDimension labelx4/Label - 2.25x3in: "162 288"
-*PaperDimension labelx5/Label - 2.25x5in: "162 360"
+*DefaultImageableArea: labelx3_5
+*ImageableArea labelx1_0/Label - 2.25x1in: "0 28.346458435059 150.661422729492 57.826770782471"
+*ImageableArea labelx2_0/Label - 2.25x2in: "0 28.346458435059 150.661422729492 129.826766967773"
+*ImageableArea labelx2_5/Label - 2.25x2in: "0 28.346458435059 150.661422729492 165.826766967773"
+*ImageableArea labelx3_0/Label - 2.25x3in: "0 28.346458435059 150.661422729492 201.826766967773"
+*ImageableArea labelx3_5/Label - 2.25x3in: "0 28.346458435059 150.661422729492 237.826766967773"
+*DefaultPaperDimension: labelx3_5
+*PaperDimension labelx1_0/Label - 2.25x1in: "162 72"
+*PaperDimension labelx2_0/Label - 2.25x2in: "162 144"
+*PaperDimension labelx2_5/Label - 2.25x2in: "162 180"
+*PaperDimension labelx3_0/Label - 2.25x3in: "162 216"
+*PaperDimension labelx3_5/Label - 2.25x3in: "162 252"
 *MaxMediaWidth: "162"
 *MaxMediaHeight: "72000"
 *HWMargins: 0 28.346458435059 11.338582992554 14.173229217529
@@ -118,4 +121,4 @@
 *Font Times-Roman: Standard "(1.05)" Standard ROM
 *Font ZapfChancery-MediumItalic: Standard "(1.05)" Standard ROM
 *Font ZapfDingbats: Special "(001.005)" Special ROM
-*% End of ep_tmc610.ppd, 05907 bytes.
+*% End of ep_tmc610.ppd, 06107 bytes.
