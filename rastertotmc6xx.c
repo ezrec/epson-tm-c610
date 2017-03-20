@@ -221,7 +221,6 @@ StartPage(ppd_file_t         *ppd,	/* I - PPD file */
   * Get the dithering parameters...
   */
 
-#if 0
   switch (PrinterPlanes)
   {
     case 1 : /* K */
@@ -238,7 +237,6 @@ StartPage(ppd_file_t         *ppd,	/* I - PPD file */
 	                            resolution, "Yellow");
         break;
   }
-#endif
 
   for (plane = 0; plane < PrinterPlanes; plane ++)
   {
@@ -271,7 +269,7 @@ StartPage(ppd_file_t         *ppd,	/* I - PPD file */
       */
 
       cupsWritePrintData("AC\002\000\000", 5);
-      putchar(atoi(attr->value));
+      putchar(header->CutMedia ? '\001' : '\000');
     }
 
    /*

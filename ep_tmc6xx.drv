@@ -8,34 +8,43 @@ Font *
 // Manufacturer, model name, and version
 Manufacturer "EPSON"
 ModelNumber 0
-Version 0.2
+Version 0.3
 
 Attribute cupsESCPAC "" 1
 
 Attribute cupsInkChannels "" 3
 
+Attribute cupsAllDither 360x180dpi "0.25 0.5 1.0"
+ColorProfile -/- 1.0 1.0
+  1.0 0.0 0.0
+  0.0 1.0 0.0
+  0.0 0.0 1.0
+
 // Each filter provided by the driver...
+DriverType custom
+Filter application/vnd.cups-command 100 commandtoescpx
 Filter application/vnd.cups-raster 100 rastertotmc6xx
 
 // We have a cutter
 Cutter yes
 
+Duplex none
 VariablePaperSize yes
 MinSize 1in 1in
 MaxSize 2.25in 1000in
 HWMargins 0mm 10mm 4mm 5mm
 
 // Supported page sizes
-#media "labelx1/Label - 2.25x1in" 2.25in 1in
-#media "labelx2/Label - 2.25x2in" 2.25in 2in
-#media "labelx3/Label - 2.25x3in" 2.25in 3in
-#media "labelx4/Label - 2.25x3in" 2.25in 4in
-#media "labelx5/Label - 2.25x5in" 2.25in 5in
-MediaSize labelx1
-MediaSize labelx2
-MediaSize labelx3
-*MediaSize labelx4
-MediaSize labelx5
+#media "labelx1_0/Label - 2.25x1in" 2.25in 1in
+#media "labelx2_0/Label - 2.25x2in" 2.25in 2in
+#media "labelx2_5/Label - 2.25x2in" 2.25in 2.5in
+#media "labelx3_0/Label - 2.25x3in" 2.25in 3in
+#media "labelx3_5/Label - 2.25x3in" 2.25in 3.5in
+MediaSize labelx1_0
+MediaSize labelx2_0
+MediaSize labelx2_5
+MediaSize labelx3_0
+*MediaSize labelx3_5
 
 // Color information
 ColorDevice yes
