@@ -281,11 +281,13 @@ StartPage(ppd_file_t         *ppd,	/* I - PPD file */
     /*
      * Idle spacing
      */
-    for (int i = 0; i < 2; i++)
+     int z;
+  for (z=0;z<10;z++)
     {
         cupsWritePrintData("\033(d\xff\x7f", 5);
-        for (int j = 0; j < 32767; j++)
-            cupsWritePrintData("\000", 1);
+  	int y;
+      for (y=0;z<32767;y++)
+              cupsWritePrintData("\000", 1);
     }
 
  /*
