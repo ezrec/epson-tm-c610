@@ -11,7 +11,6 @@
  * Include necessary headers...
  */
 
-#include <cups/i18n.h>
 #include <cupsfilters/driver.h>
 #include <signal.h>
 
